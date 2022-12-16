@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://provemewrong.pl/posts/post/</loc>
-    <lastmod>2022-12-14T22:26:08+01:00</lastmod>
+    <loc>http://provemewrong.pl/post/newpost/</loc>
+    <lastmod>2022-12-17T00:02:35+01:00</lastmod>
   </url><url>
-    <loc>http://provemewrong.pl/posts/</loc>
-    <lastmod>2022-12-14T22:26:08+01:00</lastmod>
+    <loc>http://provemewrong.pl/post/</loc>
+    <lastmod>2022-12-17T00:02:35+01:00</lastmod>
   </url><url>
     <loc>http://provemewrong.pl/</loc>
+    <lastmod>2022-12-17T00:02:35+01:00</lastmod>
+  </url><url>
+    <loc>http://provemewrong.pl/post/post/</loc>
     <lastmod>2022-12-14T22:26:08+01:00</lastmod>
   </url><url>
     <loc>http://provemewrong.pl/categories/</loc>
