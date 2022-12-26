@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='This is some content
-public static void main(String[]args) { System.out.println(&amp;#34;Hello my new blog&amp;#34;); } '>
-<title>Post</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='This isn&amp;rsquo;t obviously a new topic, I&amp;rsquo;ve somehow skipped it, because it was hot at the time I was still junior dev and I wasn&amp;rsquo;t ready to dive in any architectural topics. Back then I was working on rather small to medium sized products that wouldn&amp;rsquo;t needed it.
+The larger the product gets the more it would benefit from a proper modularization. At some point of my developer career I thought that a good architecture pattern would be enough for maintaining a project.'>
+<title>Modularization and why I suck at it</title>
 
 <link rel='canonical' href='http://provemewrong.pl/post/post/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Post'>
-<meta property='og:description' content='This is some content
-public static void main(String[]args) { System.out.println(&amp;#34;Hello my new blog&amp;#34;); } '>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Modularization and why I suck at it'>
+<meta property='og:description' content='This isn&amp;rsquo;t obviously a new topic, I&amp;rsquo;ve somehow skipped it, because it was hot at the time I was still junior dev and I wasn&amp;rsquo;t ready to dive in any architectural topics. Back then I was working on rather small to medium sized products that wouldn&amp;rsquo;t needed it.
+The larger the product gets the more it would benefit from a proper modularization. At some point of my developer career I thought that a good architecture pattern would be enough for maintaining a project.'>
 <meta property='og:url' content='http://provemewrong.pl/post/post/'>
 <meta property='og:site_name' content='Prove me wrong'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-12-14T22:26:08&#43;01:00'/><meta property='article:modified_time' content='2022-12-14T22:26:08&#43;01:00'/>
-<meta name="twitter:title" content="Post">
-<meta name="twitter:description" content="This is some content
-public static void main(String[]args) { System.out.println(&amp;#34;Hello my new blog&amp;#34;); } ">
+<meta name="twitter:title" content="Modularization and why I suck at it">
+<meta name="twitter:description" content="This isn&amp;rsquo;t obviously a new topic, I&amp;rsquo;ve somehow skipped it, because it was hot at the time I was still junior dev and I wasn&amp;rsquo;t ready to dive in any architectural topics. Back then I was working on rather small to medium sized products that wouldn&amp;rsquo;t needed it.
+The larger the product gets the more it would benefit from a proper modularization. At some point of my developer career I thought that a good architecture pattern would be enough for maintaining a project.">
     </head>
     <body class="
     article-page
@@ -115,7 +115,7 @@ public static void main(String[]args) { System.out.println(&amp;#34;Hello my new
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/post/post/">Post</a>
+            <a href="/post/post/">Modularization and why I suck at it</a>
         </h2>
     
         
@@ -152,7 +152,7 @@ public static void main(String[]args) { System.out.println(&amp;#34;Hello my new
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    3 minute read
                 </time>
             </div>
         
@@ -167,11 +167,33 @@ public static void main(String[]args) { System.out.println(&amp;#34;Hello my new
     <section class="article-content">
     
     
-    <p>This is some content</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span>args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello my new blog&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div>
+    <p>This isn&rsquo;t obviously a new topic, I&rsquo;ve somehow skipped it, because it was hot at the time I was still junior dev and I wasn&rsquo;t ready to dive in any architectural topics. Back then I was working on rather small to medium sized products that wouldn&rsquo;t needed it.</p>
+<p>The larger the product gets the more it would benefit from a proper modularization.
+At some point of my developer career I thought that a good architecture pattern would be enough for maintaining a project.
+The lack of knowledge how to properly divide app into modules was quickly revealed as I worked on some bigger projects.
+In fact there is a long way to go before I could say that I&rsquo;m familiar with the topic enough to guide another people.</p>
+<ol>
+<li>The main questions I asked myself was why should I do it?</li>
+<li>How it can be done? Is there any silver bullet or guide how to do it properly?</li>
+<li>What are the possible problems with this approach?</li>
+</ol>
+<h2 id="why-should-i-do-it">Why should I do it?</h2>
+<p>At some point in the product development you would see that handling one single repository will be painful.
+If the project is big and contains lots of features:</p>
+<ul>
+<li>it probably takes a lot of time to build</li>
+<li>there are dozens of merge requests that may cause solving merge conflicts often</li>
+<li>it&rsquo;s hard to align with all feature specific logic (so often huge teams start to divide to feature-based teams)</li>
+<li>reusability - if you have for example more than one product you can share one module between two apps, if you have chat feature you can create configurable module out of it and reuse it among projects.</li>
+<li>having huge team responsible for whole app is hard, instead you can divide it into feature-teams so each team will be familiar with their own smaller part of code.</li>
+</ul>
+<h2 id="how-it-can-be-done">How it can be done?</h2>
+<p>First of all if you have already more-less clean architecture you should consider create modules that are not feature-based like Networking. Then the hardest part will be creating feature modules. This might be tricky at the beginning to precise how big should module be. Each app has it&rsquo;s own features, feature-model could be f.ex. a chat, payments integration, onboarding, etc. It&rsquo;s really up to you which logic would you like first to be reusable.</p>
+<h2 id="what-are-possible-problems-with-modularizing">What are possible problems with modularizing?</h2>
+<p>You need to know it won&rsquo;t be a quick task to be completed within one sprint. Each product is different and first step will be a meeting or several to discuss how to handle it. To look at the code, describe starting points, which modules will app need first.
+Your product owners will have to agree to take one or two people out of implementing features for some sprints to take care of modularization.
+It may become complex and time consuming, you&rsquo;ll probably need to refactor some parts of code (that is actually on a pros side), add tests.</p>
+
 </section>
 
 

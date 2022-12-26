@@ -16,16 +16,38 @@
 </description>
         </item>
         <item>
-        <title>Post</title>
+        <title>Modularization and why I suck at it</title>
         <link>http://provemewrong.pl/post/post/</link>
         <pubDate>Wed, 14 Dec 2022 22:26:08 +0100</pubDate>
         
         <guid>http://provemewrong.pl/post/post/</guid>
-        <description>&lt;p&gt;This is some content&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;args&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello my new blog&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <description>&lt;p&gt;This isn&amp;rsquo;t obviously a new topic, I&amp;rsquo;ve somehow skipped it, because it was hot at the time I was still junior dev and I wasn&amp;rsquo;t ready to dive in any architectural topics. Back then I was working on rather small to medium sized products that wouldn&amp;rsquo;t needed it.&lt;/p&gt;
+&lt;p&gt;The larger the product gets the more it would benefit from a proper modularization.
+At some point of my developer career I thought that a good architecture pattern would be enough for maintaining a project.
+The lack of knowledge how to properly divide app into modules was quickly revealed as I worked on some bigger projects.
+In fact there is a long way to go before I could say that I&amp;rsquo;m familiar with the topic enough to guide another people.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The main questions I asked myself was why should I do it?&lt;/li&gt;
+&lt;li&gt;How it can be done? Is there any silver bullet or guide how to do it properly?&lt;/li&gt;
+&lt;li&gt;What are the possible problems with this approach?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;why-should-i-do-it&#34;&gt;Why should I do it?&lt;/h2&gt;
+&lt;p&gt;At some point in the product development you would see that handling one single repository will be painful.
+If the project is big and contains lots of features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;it probably takes a lot of time to build&lt;/li&gt;
+&lt;li&gt;there are dozens of merge requests that may cause solving merge conflicts often&lt;/li&gt;
+&lt;li&gt;it&amp;rsquo;s hard to align with all feature specific logic (so often huge teams start to divide to feature-based teams)&lt;/li&gt;
+&lt;li&gt;reusability - if you have for example more than one product you can share one module between two apps, if you have chat feature you can create configurable module out of it and reuse it among projects.&lt;/li&gt;
+&lt;li&gt;having huge team responsible for whole app is hard, instead you can divide it into feature-teams so each team will be familiar with their own smaller part of code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-it-can-be-done&#34;&gt;How it can be done?&lt;/h2&gt;
+&lt;p&gt;First of all if you have already more-less clean architecture you should consider create modules that are not feature-based like Networking. Then the hardest part will be creating feature modules. This might be tricky at the beginning to precise how big should module be. Each app has it&amp;rsquo;s own features, feature-model could be f.ex. a chat, payments integration, onboarding, etc. It&amp;rsquo;s really up to you which logic would you like first to be reusable.&lt;/p&gt;
+&lt;h2 id=&#34;what-are-possible-problems-with-modularizing&#34;&gt;What are possible problems with modularizing?&lt;/h2&gt;
+&lt;p&gt;You need to know it won&amp;rsquo;t be a quick task to be completed within one sprint. Each product is different and first step will be a meeting or several to discuss how to handle it. To look at the code, describe starting points, which modules will app need first.
+Your product owners will have to agree to take one or two people out of implementing features for some sprints to take care of modularization.
+It may become complex and time consuming, you&amp;rsquo;ll probably need to refactor some parts of code (that is actually on a pros side), add tests.&lt;/p&gt;
+</description>
         </item>
         
     </channel>
